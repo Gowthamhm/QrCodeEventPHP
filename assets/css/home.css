@@ -72,7 +72,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.logout {
-		padding-left: 71%;
+		padding-left: 82%;
 		font-size: 21px;
 		color: white;
 	}
@@ -81,7 +81,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	.logout {
-	padding-left: 74%;
+	padding-left: 82%;
 		font-size: 23px;
 		color: white;
 		    width: -webkit-fill-available;
@@ -91,7 +91,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.logout {
-		padding-left: 74%;
+		padding-left: 82%;
 		font-size: 23px;
 		color: white;
 		    width: -webkit-fill-available;
