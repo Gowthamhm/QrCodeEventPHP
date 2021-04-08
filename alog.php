@@ -6,7 +6,8 @@ include 'error.php';
 if (isset($_POST['login'])) {
   $username = mysqli_real_escape_string($conn,$_POST['username']);
   $password = mysqli_real_escape_string($conn,$_POST['password']);
-     $searchUser = "SELECT * FROM `USERS` WHERE username = '".$username."' and password ='".$password."'";
+  $searchUser = "SELECT * FROM `users` WHERE username =\'".$username."\' and password = \'".$password."\'";
+     // $searchUser = "SELECT * FROM `USERS` WHERE username = '".$username."' and password ='".$password."'";
      echo $searchUser;
      $result = $conn->query($searchUser);
      echo $result;
