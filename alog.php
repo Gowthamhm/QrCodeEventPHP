@@ -28,14 +28,14 @@ if (isset($_POST['login'])) {
       ?>
       <script type="text/javascript" charset="utf-8">
        alert("Check The Username And Password ");
-       window.location.replace('home.php');
+       // window.location.replace('home.php');
        </script>
        <?php
    }
      }else{
         ?><script type="text/javascript" charset="utf-8">
   alert("Please Contact Admin to Register ");
-window.location.replace("login.php");
+// window.location.replace("login.php");
       </script>
       <?php
      }
@@ -43,7 +43,7 @@ window.location.replace("login.php");
 else{
    ?>
 <script type='text/javascript' charset='utf-8'>
-window.location.replace('login.php');
+// window.location.replace('login.php');
 </script>
 <<?php
 }
