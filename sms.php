@@ -46,7 +46,7 @@ include 'error.php';
  				</span>
 
  				<span class="contact100-form-title-2">
- 					Feel free to drop us a Instance Message!
+ 					Feel free to drop a Instance Message!
  				</span>
  			</div>
 
