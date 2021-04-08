@@ -2,14 +2,31 @@
 include 'config.php';
 include 'error.php';
 include 'session.php';
-// include 'nav.php';
+include 'nav.php';
+if (!empty($_SESSION['folder_name'])) {
+  // echo $_SESSION['folder_name'];
+}else {
+  ?><script type="text/javascript" charset="utf-8">
+   window.location.replace('home.php');
+   </script>
+   <?php
+}
+
+if (!isset ($_GET['page']) ) {
+    $page = 1;
+} else {
+    $page = $_GET['page'];
+}
+// echo $page;
+$results_per_page = 10;
+$page_first_result = ($page-1) * $results_per_page;
 
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>QrCode Display</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link    rel="stylesheet"      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
@@ -17,8 +34,6 @@ include 'session.php';
         <link rel="stylesheet" href="css/table.css" />
   </head>
   <body>
-    <h1><span class="blue">&lt;</span>Table<span class="blue">&gt;</span> <span class="yellow">Responsive</pan></h1>
-    <h2>Created with love by <a href="https://github.com/pablorgarcia" target="_blank">Pablo García</a></h2>
 
     <table class="container">
     	<thead>
@@ -27,45 +42,51 @@ include 'session.php';
     			<th><h1>Views</h1></th>
     			<th><h1>Clicks</h1></th>
     			<th><h1>Average</h1></th>
+          <th> <h1>Sl No.</h1> </th>
+      <th> <h1>Text</h1> </th>
+      <th> <h1>In QrCode</h1> </th>
+      <th> <h1>Out QrCode</h1> </th>
+      <th> <h1>Out QrCode</h1> </th>
     		</tr>
     	</thead>
     	<tbody>
-    		<tr>
-    			<td>Google</td>
-    			<td>9518</td>
-    			<td>6369</td>
-    			<td>01:32:50</td>
-    		</tr>
-    		<tr>
-    			<td>Twitter</td>
-    			<td>7326</td>
-    			<td>10437</td>
-    			<td>00:51:22</td>
-    		</tr>
-    		<tr>
-    			<td>Amazon</td>
-    			<td>4162</td>
-    			<td>5327</td>
-    			<td>00:24:34</td>
-    		</tr>
-        <tr>
-    			<td>LinkedIn</td>
-    			<td>3654</td>
-    			<td>2961</td>
-    			<td>00:12:10</td>
-    		</tr>
-        <tr>
-    			<td>CodePen</td>
-    			<td>2002</td>
-    			<td>4135</td>
-    			<td>00:46:19</td>
-    		</tr>
-        <tr>
-    			<td>GitHub</td>
-    			<td>4623</td>
-    			<td>3486</td>
-    			<td>00:31:52</td>
-    		</tr>
+        <?php
+$select = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name']."'";
+$result = $conn->query($select);
+$number_of_result = mysqli_num_rows($result);
+//determine the total number of pages available
+$number_of_page = ceil ($number_of_result / $results_per_page);
+$query = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name']."' LIMIT " . $page_first_result . ',' . $results_per_page;
+// echo $query;
+ $result = $conn->query($query);
+if ($result->num_rows > 0){
+$count = 1;
+   while($row = $result->fetch_assoc()){
+     ?>
+       <tr>
+         <td> <?php echo $count; ?></td><td id="title">
+         <?php echo $row['text'];?></td><td> <img src='<?php echo($row['path'].'/'.$row['infilename']);  ?>' class="img-fluid pull-xs-left" alt="...">
+         </td><td> <img src='<?php echo($row['path'].'/'.$row['outfilename']); ?>' class="img-fluid pull-xs-left" alt="...">
+         </td><td>
+         <?php if($row['status'] == 0){
+            echo "Not Shared Yet";
+         }else if($row['status'] == 1){
+           echo "Shared ";
+         }else if($row['status'] == 99){
+           echo "Scanned the In QrCode and Shared the out QrCode";
+         }else{
+           echo "Already Scanned";
+         }
+         $count++;
+?>
+</td>
+  </tr>
+<?php
+   }
+}
+?>
+
+
     	</tbody>
     </table>
   </body>
