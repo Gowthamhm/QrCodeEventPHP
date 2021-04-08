@@ -9,11 +9,11 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: none;">
-   <!--  <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="sms.php">Instance Message <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
@@ -29,8 +29,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul> -->
+      </li> -->
+    </ul>
     <div  class="logout">
     <a href="logout.php" style="color:white;"><i class="fas fa-sign-out-alt"></i> Logout
     </a>
