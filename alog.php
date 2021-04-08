@@ -7,9 +7,9 @@ if (isset($_POST['login'])) {
   $username = mysqli_real_escape_string($conn,$_POST['username']);
   $password = mysqli_real_escape_string($conn,$_POST['password']);
      $searchUser = "SELECT * FROM `USERS` WHERE username = '".$username."' and password ='".$password."'";
-     // echo $searchUser;
+     echo $searchUser;
      $result = $conn->query($searchUser);
-     // echo $result;
+     echo $result;
      if ($result) {
      if ($result->num_rows > 0) {
        // echo "inside if result";
