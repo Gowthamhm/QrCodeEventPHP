@@ -2,7 +2,7 @@
 include 'config.php';
 include 'error.php';
 include 'session.php';
-include 'nav.php';
+// include 'nav.php';
 
 ?>
 <!DOCTYPE html>
