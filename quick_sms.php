@@ -30,7 +30,7 @@ if(stristr($recipient_phone_numbers, ',')){
 $content = [
   'to' => array_values($recipient_phone_numbers),
   'from' => $send_from,
-  'body' => $message
+  'body' => $text
 ];
 
 $data = json_encode($content);
