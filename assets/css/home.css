@@ -44,7 +44,7 @@
 }
 
 .inp{
-   color: white; 
+   color: white;
    background: black;
 }
 .inp:hover{
@@ -81,36 +81,40 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	.logout {
-		padding-left: 83%;
+	padding-left: 74%;
 		font-size: 23px;
 		color: white;
+		    width: -webkit-fill-available;
 	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.logout {
-		padding-left: 84%;
+		padding-left: 74%;
 		font-size: 23px;
 		color: white;
+		    width: -webkit-fill-available;
 	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	.logout {
-		padding-left: 85%;
-		font-size: 25px;
-		color: white;
+		padding-left: 74%;
+	    font-size: 22px;
+	    color: white;
+	    width: -webkit-fill-available;
 	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	.logout {
-		padding-left: 88%;
+	padding-left: 74%;
 		font-size: 25px;
 		color: white;
+		    width: -webkit-fill-available;
 	}
 }
 .model{
