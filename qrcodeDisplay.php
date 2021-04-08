@@ -38,10 +38,6 @@ $page_first_result = ($page-1) * $results_per_page;
     <table class="container">
     	<thead>
     		<tr>
-    			<th><h1>Sites</h1></th>
-    			<th><h1>Views</h1></th>
-    			<th><h1>Clicks</h1></th>
-    			<th><h1>Average</h1></th>
           <th> <h1>Sl No.</h1> </th>
       <th> <h1>Text</h1> </th>
       <th> <h1>In QrCode</h1> </th>
