@@ -72,19 +72,20 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.logout {
-		padding-left: 82%;
-		font-size: 21px;
-		color: white;
+    padding-left: 80%;
+    font-size: 21px;
+    color: white;
+
 	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	.logout {
-	padding-left: 82%;
-		font-size: 23px;
-		color: white;
-		    width: -webkit-fill-available;
+		padding-left: 83%;
+		    font-size: 23px;
+		    color: white;
+		    width: max-content;
 	}
 }
 
@@ -101,10 +102,9 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	.logout {
-		padding-left: 74%;
-	    font-size: 22px;
-	    color: white;
-	    width: -webkit-fill-available;
+		padding-left: 71%;
+	font-size: 25px;
+	color: white;
 	}
 }
 
