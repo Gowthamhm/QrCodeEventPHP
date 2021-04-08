@@ -42,7 +42,7 @@ $page_first_result = ($page-1) * $results_per_page;
       <th> <h1>Text</h1> </th>
       <th> <h1>In QrCode</h1> </th>
       <th> <h1>Out QrCode</h1> </th>
-      <th> <h1>Out QrCode</h1> </th>
+      <th> <h1>Status</h1> </th>
     		</tr>
     	</thead>
     	<tbody>
