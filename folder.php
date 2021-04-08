@@ -38,7 +38,7 @@ $user = $_SESSION['folder_name'];
        <link rel="stylesheet" type="text/css" href="assets/css/home.css">
        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
            <title> <?php echo   $user; ?></title>
-	<script src="assets/js/sample.js"></script>
+	<script type = "text/javascript" src="assets/js/sample.js"></script>
 	<link rel="stylesheet" href="assets/css/samples.css">
 	<link rel="stylesheet" href="assets/css/neo.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
