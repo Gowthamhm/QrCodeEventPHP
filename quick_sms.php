@@ -16,7 +16,8 @@ $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
 $send_from = "+447537454577";
 $recipient_phone_numbers = "91".$number; //May be several, separate with a comma `,`.
-$message = "This test message will be sent to {$recipient_phone_numbers} from {$assigned_phone_number}";
+$message = $text;
+// "This test message will be sent to {$recipient_phone_numbers} from ";
 
 // Check recipient_phone_numbers for multiple numbers and make it an array.
 if(stristr($recipient_phone_numbers, ',')){
