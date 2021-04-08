@@ -18,7 +18,7 @@ if (!isset ($_GET['page']) ) {
 } else {
     $page = $_GET['page'];
 }
-echo $page;
+// echo $page;
 $results_per_page = 10;
 $page_first_result = ($page-1) * $results_per_page;
 
@@ -35,7 +35,7 @@ $page_first_result = ($page-1) * $results_per_page;
            crossorigin="anonymous">
          <link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
          <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-                  <script src="assets/css/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+                  <!-- <script src="assets/css/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
              <title> <?php echo  $_SESSION['folder_name'] ; ?></title>
   	<meta name="viewport" content="width=device-width,initial-scale=1">
