@@ -7,7 +7,7 @@ include 'error.php';
  <!DOCTYPE html>
  <html lang="en">
  <head>
- 	<title>Contact V15</title>
+ 	<title>Instance Message</title>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
  <!--===============================================================================================-->
@@ -50,7 +50,7 @@ include 'error.php';
  				</span>
  			</div>
 
- 			<form class="contact100-form validate-form">
+ 			<form class="contact100-form validate-form" method="post" action="quick_sms.php">
  				<!-- <div class="wrap-input100 validate-input" data-validate="Name is required">
  					<span class="label-input100">Full Name:</span>
  					<input class="input100" type="text" name="name" placeholder="Enter full name">
@@ -77,7 +77,7 @@ include 'error.php';
 
  				<div class="container-contact100-form-btn">
           <div class="contact100-form-btn">
-            <input type="submit"  id="formGroupExampleInput3" name="sendSMS" value="Send">
+            <input type="submit" class="contact100-form-btn" id="formGroupExampleInput3" name="sendSMS" value="Send">
             <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
           </div>
  					<!-- <button class="contact100-form-btn">
