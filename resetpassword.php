@@ -20,7 +20,7 @@ if ($password === $confirmPassword) {
 // echo $dbusername;
 // echo $dbemail;
 if($dbusername == $username && $dbemail == $email){
-  $update = "UPDATE `USERS` SET `password`='".$password."' WHERE username='".$username."' and email_id='".$email."'";
+  $update = "UPDATE `users` SET `password`='".$password."' WHERE username='".$username."' and email_id='".$email."'";
   if($conn->query($update) === TRUE){
     ?><script type="text/javascript" charset="utf-8">
      alert("Updated Successfully Login using new Password");
