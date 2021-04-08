@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
      // echo $searchUser;
      $result = $conn->query($searchUser);
      // echo $result;
-     // if ($result) {
+     if ($result) {
      if ($result->num_rows > 0) {
        // echo "inside if result";
        while($row = $result->fetch_assoc()) {
@@ -32,7 +32,15 @@ if (isset($_POST['login'])) {
        </script>
        <?php
    }
-     }else{
+     }
+     else {
+       ?><script type="text/javascript" charset="utf-8">
+   alert("result is empty");
+   // window.location.replace("login.php");
+     </script>
+     <?php
+     }
+   }else{
         ?><script type="text/javascript" charset="utf-8">
   alert("Please Contact Admin to Register ");
 // window.location.replace("login.php");
