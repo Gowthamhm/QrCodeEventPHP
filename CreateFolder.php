@@ -48,7 +48,7 @@ if ($dbcreator === $creator) {
   }else {
     ?><script type="text/javascript" charset="utf-8">
      alert("Folder Already Present ");
-     window.location.replace('home.php');
+     window.location.replace('Folder.php');
      </script>
      <?php
   }
