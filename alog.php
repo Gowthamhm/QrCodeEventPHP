@@ -6,8 +6,8 @@ include 'error.php';
 if (isset($_POST['login'])) {
   $username = mysqli_real_escape_string($conn,$_POST['username']);
   $password = mysqli_real_escape_string($conn,$_POST['password']);
-  $searchUser = "SELECT * FROM `users`";
-     // $searchUser = "SELECT * FROM `USERS` WHERE username = '".$username."' and password ='".$password."'";
+  // $searchUser = "SELECT * FROM `users`";
+     $searchUser = "SELECT * FROM `USERS` WHERE username = '".$username."' and password ='".$password."'";
      echo $searchUser;
      $result = $conn->query($searchUser);
      // echo $result;
@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
      $_SESSION['active_user'] = $dbusername;
      ?><script type="text/javascript" charset="utf-8">
       alert("Login Successfully ");
-      window.location.replace('home.php');
+      // window.location.replace('home.php');
       </script>
       <?php
    }else{
