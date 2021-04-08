@@ -9,7 +9,7 @@ $password =mysqli_real_escape_string($conn,$_POST['newpassword']);
 $confirmPassword =mysqli_real_escape_string($conn,$_POST['confirmpassword']);
 
 if ($password === $confirmPassword) {
-  $searchUser="SELECT * FROM `USERS` where username = '".$username."' and email_id='".$email."';";
+  $searchUser="SELECT * FROM `users` where username = '".$username."' and email_id='".$email."';";
   // echo $searchUser;
    $result = $conn->query($searchUser);
    if ($result->num_rows > 0) {
