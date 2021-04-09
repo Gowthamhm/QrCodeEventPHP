@@ -36,10 +36,13 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
+                  <th> <input type="radio" name="" value=""> </th>
                   <th>Sl No.</th>
    <th>Text</th>
-   <th>In QrCode </th>
-   <th>Out QrCode </th>
+   <th>Qouted Text</th>
+   <th>Number </th>
+   <th>InText </th>
+   <th>Out Text </th>
    <th>Status</th>
                 </tr>
             </thead>
@@ -58,12 +61,13 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
+                        <td> <input type="checkbox" name="" value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
-                       <!-- <td> <img src='<?php echo($row['path'].'/'.$row['infilename']);  ?>' class="img-fluid pull-xs-left" alt="..."></td>
-                       <td> <img src='<?php echo($row['path'].'/'.$row['outfilename']); ?>' class="img-fluid pull-xs-left" alt="..."></td> -->
-                       <td><?php echo $row[''];?></td>
-                       <td><?php echo $row['text'];?></td>
+                       <td><?php echo $row['Qoute'];?></td>
+                       <td><?php echo $row['number'];?></td>
+                       <td><?php echo $row['intext'];?></td>
+                       <td><?php echo $row['outtext'];?></td>
                        <td>
                        <?php if($row['status'] == 0){
                           echo "Not Shared Yet";
@@ -84,10 +88,12 @@ $page_first_result = ($page-1) * $results_per_page;
             <tfoot>
               <tr>
                 <th>Sl No.</th>
- <th>Text</th>
- <th>In QrCode </th>
- <th>Out QrCode </th>
- <th>Status</th>
+  <th>Text</th>
+  <th>Qouted Text</th>
+  <th>Number </th>
+  <th>InText </th>
+  <th>Out Text </th>
+  <th>Status</th>
               </tr>
             </tfoot>
         </table>
