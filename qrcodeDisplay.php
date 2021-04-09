@@ -135,7 +135,7 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
-        <input type="submit" id="submit" name="submit" value="Share">
+        <input type="submit" id="submit" name="submit" value="Share" style="display:none;">
         <div class="pagination" id="pagenation">
 <?php
 if($page > 1){
@@ -213,10 +213,10 @@ function uncheckAll() {
 //         });
 //
 // });
-var $submit = $("#submit").hide();
+
 if (document.querySelector("#example > tbody > tr > td:nth-child(1) > input[type=checkbox]").checked) {
-$submit.toggle();
+   document.getElementById("submit").style.display = "block";
 }else {
-  $submit.toggle();
+ document.getElementById("submit").style.display = "none";
 }
            </script>
