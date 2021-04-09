@@ -138,7 +138,7 @@ $page_first_result = ($page-1) * $results_per_page;
         <input type="submit" id="submit" name="submit" value="Share">
         <div class="pagination" id="pagenation">
 <?php
-if($page > 1.0){
+if($page > 1){
     echo '<a class="btn btn-primary" style='float: right;' href = "qrcodeDisplay.php?page=' . --$page . '">&laquo; </a>';
   }else{
   }
