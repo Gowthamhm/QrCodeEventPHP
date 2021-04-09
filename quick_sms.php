@@ -18,7 +18,7 @@ $send_from = "+447537454577";
 $recipient_phone_numbers = "91".$number; //May be several, separate with a comma `,`.
 $message = $text;
 // "This test message will be sent to {$recipient_phone_numbers} from ";
-// echo "$message";
+echo "$message";
 // Check recipient_phone_numbers for multiple numbers and make it an array.
 if(stristr($recipient_phone_numbers, ',')){
   $recipient_phone_numbers = explode(',', $recipient_phone_numbers);
@@ -50,10 +50,11 @@ if(curl_errno($ch)) {
     echo 'Curl error: ' . curl_error($ch);
 } else {
   curl_close($ch);
-  ?><script type="text/javascript" charset="utf-8">
+  ?>
+  <!-- <script type="text/javascript" charset="utf-8">
    alert("Message Sent Successfully");
    window.location.replace('home.php');
-   </script>
+   </script> -->
    <?php
     // echo $result;
 }
