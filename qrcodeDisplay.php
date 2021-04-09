@@ -44,7 +44,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <input type="button" name="" value="" onclick='selectsdeselect()'> </th>
+                  <th> <input type="button" name="" value="select all" onclick='selectsdeselect()'> </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
@@ -135,10 +135,13 @@ $page_first_result = ($page-1) * $results_per_page;
 function selectsdeselect(){
                 var ele=document.getElementsByName('chk');
                 for(var i=0; i<ele.length; i++){
+                  console.log(i);
                     if(ele[i].type=='checkbox'){
                         if(ele[i].checked=true){
+                          console.log("true");
                           ele[i].checked=false;
                         }else {
+                          console.log("false");
                           ele[i].checked=true;
                         }
                     }
