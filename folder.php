@@ -78,8 +78,9 @@ $user = $_SESSION['folder_name'];
                 <!-- <a href="editor.php" class="btn btn-default clfa" >New</a> -->
         </div>
         <div class="col-md-6 col-lg-4" >
-            <button class="btn btn-default clfa"  >
-                Select All</button>
+            <!-- <button class="btn btn-default clfa"  >
+                Preview</button> -->
+                <a href="preview.php" class="btn btn-default clf" >Preview</a>
         </div>
         <!--    <div class="col-md-6 col-lg-4" >
                <button class="btn btn-default clf" >
