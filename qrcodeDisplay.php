@@ -135,8 +135,8 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
-        <input type="submit" id="submit" name="submit" value="Share">
-        <div class="pagination" id="pagenation">
+        <input type="submit" id="submit" name="submit" value="Share" style="float: right;">
+        <div class="pagination" id="pagenation" style="float:right;">
 <?php
 if($page > 1){
     echo '<a class="btn btn-primary" style=\'float: right;\' href = "qrcodeDisplay.php?page=' . --$page . '">&laquo; </a>';
