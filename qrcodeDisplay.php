@@ -44,7 +44,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <input type="checkbox" name="" value="" onclick='selectsdeselect()'> </th>
+                  <th> <input type="button" name="" value="" onclick='selectsdeselect()'> </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
@@ -132,10 +132,6 @@ $page_first_result = ($page-1) * $results_per_page;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
-
 function selectsdeselect(){
                 var ele=document.getElementsByName('chk');
                 for(var i=0; i<ele.length; i++){
