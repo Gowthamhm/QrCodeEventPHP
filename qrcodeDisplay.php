@@ -124,7 +124,7 @@ $page_first_result = ($page-1) * $results_per_page;
             </tbody>
             <tfoot>
               <tr>
-                <th><input type="button" onclick='deSelect()' class="btn btn-default clf" value="Deselect All"/>  </th>
+                <th></th>
                 <th>Sl No.</th>
   <th>Text</th>
   <th>Qouted Text</th>
@@ -205,12 +205,18 @@ function uncheckAll() {
           });
           });
 
-          $(document).ready(function() {
-
-    var $submit = $("#submit").hide(),
-        $cbs = $('input[name="chk"]').click(function() {
-            $submit.toggle( $cbs.is(":checked") );
-        });
-
-});
+//           $(document).ready(function() {
+//
+//     var $submit = $("#submit").hide(),
+//         $cbs = $('input[name="chk"]').click(function() {
+//             $submit.toggle( $cbs.is(":checked") );
+//         });
+//
+// });
+var $submit = $("#submit").hide();
+if (document.querySelector("#example > tbody > tr > td:nth-child(1) > input[type=checkbox]").checked) {
+$submit.toggle();
+}else {
+  $submit.toggle();
+}
            </script>
