@@ -58,10 +58,13 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                       <td> <?php echo $count; ?></td><td id="title">
-                       <?php echo $row['text'];?></td><td> <img src='<?php echo($row['path'].'/'.$row['infilename']);  ?>' class="img-fluid pull-xs-left" alt="...">
-                       </td><td> <img src='<?php echo($row['path'].'/'.$row['outfilename']); ?>' class="img-fluid pull-xs-left" alt="...">
-                       </td><td>
+                       <td> <?php echo $count; ?></td>
+                       <td id="title"><?php echo $row['text'];?></td>
+                       <!-- <td> <img src='<?php echo($row['path'].'/'.$row['infilename']);  ?>' class="img-fluid pull-xs-left" alt="..."></td>
+                       <td> <img src='<?php echo($row['path'].'/'.$row['outfilename']); ?>' class="img-fluid pull-xs-left" alt="..."></td> -->
+                       <td><?php echo $row[''];?></td>
+                       <td><?php echo $row['text'];?></td>
+                       <td>
                        <?php if($row['status'] == 0){
                           echo "Not Shared Yet";
                        }else if($row['status'] == 1){
@@ -79,14 +82,13 @@ $page_first_result = ($page-1) * $results_per_page;
               ?>
             </tbody>
             <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                </tr>
+              <tr>
+                <th>Sl No.</th>
+ <th>Text</th>
+ <th>In QrCode </th>
+ <th>Out QrCode </th>
+ <th>Status</th>
+              </tr>
             </tfoot>
         </table>
   </body>
