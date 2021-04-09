@@ -68,8 +68,8 @@
 .cre:hover {
 	border-radius: 17px;
 }
-
-/* Extra small devices (phones, 600px and down) */
+/*
+Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
 	.logout {
     padding-left: 82%;
@@ -79,7 +79,7 @@
 	}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+Small devices (portrait tablets and large phones, 600px and up)
 @media only screen and (min-width: 600px) {
 	.logout {
 		padding-left: 86%;
@@ -89,7 +89,7 @@
 	}
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+Medium devices (landscape tablets, 768px and up)
 @media only screen and (min-width: 768px) {
 	.logout {
 		padding-left: 87%;
@@ -99,7 +99,7 @@
 	}
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+Large devices (laptops/desktops, 992px and up)
 @media only screen and (min-width: 992px) {
 	.logout {
 		padding-left: 71%;
@@ -108,7 +108,7 @@
 	}
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+Extra large devices (large laptops and desktops, 1200px and up)
 @media only screen and (min-width: 1200px) {
 	.logout {
 	padding-left: 74%;
@@ -116,7 +116,7 @@
 		color: white;
 		    width: -webkit-fill-available;
 	}
-}
+} */
 .model{
 	position: fixed;
     z-index: 1;
