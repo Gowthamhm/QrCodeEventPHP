@@ -69,7 +69,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="chk" value="<?php echo $row['slno'] ?>"> </td>
+                        <td> <input type="checkbox" name="chk" value="<?php echo $row['slno'] ?>" checked> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
