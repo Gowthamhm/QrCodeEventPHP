@@ -139,14 +139,14 @@ $page_first_result = ($page-1) * $results_per_page;
         <div class="pagination" id="pagenation">
 <?php
 if($page > 1.0){
-    echo '<a class="btn btn-primary" style="float: right;" href = "qrcodeDisplay.php?page=' . --$page . '">&laquo; </a>';
+    echo '<a class="btn btn-primary" style='float: right;' href = "qrcodeDisplay.php?page=' . --$page . '">&laquo; </a>';
   }else{
   }
 for($page = 1; $page<= $number_of_page; $page++) {
-    echo '<a class="btn btn-primary" id="'.$page.'"style="float: right;" href = "qrcodeDisplay.php?page=' . $page . '">' . $page . ' </a>';
+    echo '<a class="btn btn-primary" id="'.$page.'"style='float: right;' href = "qrcodeDisplay.php?page=' . $page . '">' . $page . ' </a>';
   }
   if($page > 2){
-    echo '<a class="btn btn-primary" style="float: right;" href ="qrcodeDisplay.php?page=' . $page++ . '">&raquo; </a>';
+    echo '<a class="btn btn-primary" style='float: right;' href ="qrcodeDisplay.php?page=' . $page++ . '">&raquo; </a>';
   }else{
 
     }
@@ -188,11 +188,9 @@ function selects(){
           });
 
           $(document).ready(function() {
-
     var $submit = $("#submit").hide(),
         $cbs = $('input[name="chk"]').click(function() {
             $submit.toggle( $cbs.is(":checked") );
         });
-
 });
            </script>
