@@ -73,7 +73,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <button id="btn" class="btn btn-default clf">Check / uncheck All</button> </th>
+                  <th> <button id="btn" class="btn btn-default clf" onclick="show()">Check / uncheck All</button> </th>
                   <th>Sl No.</th>
    <th id="title">Text</th>
    <th>Qouted Text</th>
@@ -213,10 +213,11 @@ function uncheckAll() {
 //         });
 //
 // });
-
-if (document.querySelector("#example > tbody > tr > td:nth-child(1) > input[type=checkbox]").checked) {
-   document.getElementById("submit").style.display = "block";
-}else {
- document.getElementById("submit").style.display = "none";
+function show(){
+  if (document.querySelector("#example > tbody > tr > td:nth-child(1) > input[type=checkbox]").checked) {
+     document.getElementById("submit").style.display = "block";
+  }else {
+   document.getElementById("submit").style.display = "none";
+  }
 }
            </script>
