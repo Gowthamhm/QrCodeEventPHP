@@ -40,13 +40,42 @@ $page_first_result = ($page-1) * $results_per_page;
          <link rel="stylesheet" type="text/css" href="assets/css/home.css">
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   </head>
+  <style>
+.pull-xs-left{
+ width: 150px;
+ height: 150px;
+}
+.pagination {
+ display: inline-block;
+
+}
+
+.pagination a {
+ color: black;
+ float: right;
+ padding: 8px 16px;
+ text-decoration: none;
+}
+
+.pagination a.active {
+ background-color: #4CAF50;
+ color: white;
+ border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+ background-color: #ddd;
+ border-radius: 5px;
+}
+</style>
   <body>
+        <input type="search" class="form-control mr-sm-2" aria-label="Search"  id="search" placeholder="Filter by Text" style="  width: auto;float: right;  height: fit-content;">
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                   <th>  <input type="button" class="btn btn-default clf" onclick='selects()' value="Select All"/>  </th>
                   <th>Sl No.</th>
-   <th>Text</th>
+   <th id="title">Text</th>
    <th>Qouted Text</th>
    <th>Number </th>
    <th>InText </th>
@@ -143,4 +172,17 @@ function selects(){
                       ele[i].checked=false;
 
               }
-          }    </script>
+          }
+          $('#search').keyup(function() {
+          var regex = new RegExp($('#search').val(), "i");
+          var rows = $('table tr:gt(0)');
+          rows.each(function (index) {
+            title = $(this).children("#title").html()
+            if (title.search(regex) != -1) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+          });
+           </script>
