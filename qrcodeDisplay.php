@@ -135,7 +135,7 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
-      <div class="row" style="float:right;">
+      <div class="row">
         <div class="pagination" id="pagenation" >
 <?php
 if($page > 1){
@@ -155,7 +155,7 @@ for($page = 1; $page<= $number_of_page; $page++) {
 </div>
   <div class="row" style="float:right;">
 <!-- <a class="btn btn-success" href="#" id="submit" style="float: right;" role="button">Share</a> -->
-<button type="button" name="button" class="btn btn-success" href="#" id="submit" style="float: right;" role="button">Share</button>
+<button type="button" name="button" class="btn btn-success" href="preview.php" id="submit" style="float: right;" role="button">Share</button>
   <!-- <input type="submit"  name="submit" value="Share" style="float: right;"> -->
 </div>
   </body>
@@ -225,5 +225,5 @@ function uncheckAll() {
 //   }else {
 //    document.getElementById("submit").style.display = "none";
 //   }
-}
+// }
            </script>
