@@ -106,6 +106,22 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
+        <div class="pagination" id="pagenation">
+<?php
+if($page > 1){
+    echo '<a class="btn btn-primary" href = "qrcodeDisplay.php?page=' . --$page . '">&laquo; </a>';
+  }else{
+  }
+for($page = 1; $page<= $number_of_page; $page++) {
+    echo '<a class="btn btn-primary" id="'.$page.'" href = "qrcodeDisplay.php?page=' . $page . '">' . $page . ' </a>';
+  }
+  if($page > 2){
+    echo '<a class="btn btn-primary" href = "qrcodeDisplay.php?page=' . $page++ . '">&raquo; </a>';
+  }else{
+
+    }
+ ?>
+</div>
   </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
