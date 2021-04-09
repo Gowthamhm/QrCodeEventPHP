@@ -135,6 +135,7 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
+        <input type="submit" id="submit" name="submit" value="Share">
         <div class="pagination" id="pagenation">
 <?php
 if($page > 1.0){
@@ -185,4 +186,13 @@ function selects(){
             }
           });
           });
+
+          $(document).ready(function() {
+
+    var $submit = $("#submit").hide(),
+        $cbs = $('input[name="chk"]').click(function() {
+            $submit.toggle( $cbs.is(":checked") );
+        });
+
+});
            </script>
