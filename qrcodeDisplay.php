@@ -44,7 +44,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <input type="checkbox" name="" value=""> </th>
+                  <th> <input type="checkbox" name="" value="" onclick='selectsdeselect()'> </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
@@ -69,7 +69,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="" value="<?php echo $row['slno'] ?>"> </td>
+                        <td> <input type="checkbox" name="chk" value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
@@ -135,4 +135,18 @@ $page_first_result = ($page-1) * $results_per_page;
 $(document).ready(function() {
     $('#example').DataTable();
 } );
+
+function selectsdeselect(){
+                var ele=document.getElementsByName('chk');
+                for(var i=0; i<ele.length; i++){
+                    if(ele[i].type=='checkbox'){
+                        if(ele[i].checked=true){
+                          ele[i].checked=false;
+                        }else {
+                          ele[i].checked=true;
+                        }
+                    }
+
+                }
+            }
 </script>
