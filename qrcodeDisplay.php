@@ -44,7 +44,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th>  <input type="button" onclick='selects()' value="Select All"/>  </th>
+                  <th>  <input type="button" class="btn btn-default clf" onclick='selects()' value="Select All"/>  </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
@@ -95,7 +95,7 @@ $page_first_result = ($page-1) * $results_per_page;
             </tbody>
             <tfoot>
               <tr>
-                <th><input type="button" onclick='deSelect()' value="Deselect All"/>  </th>
+                <th><input type="button" onclick='deSelect()' class="btn btn-default clf" value="Deselect All"/>  </th>
                 <th>Sl No.</th>
   <th>Text</th>
   <th>Qouted Text</th>
