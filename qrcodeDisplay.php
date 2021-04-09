@@ -135,7 +135,7 @@ $page_first_result = ($page-1) * $results_per_page;
               </tr>
             </tfoot>
         </table>
-        <input type="submit" id="submit" name="submit" value="Share" style="float: right;">
+      <div class="row">
         <div class="pagination" id="pagenation" style="float:right;">
 <?php
 if($page > 1){
@@ -152,6 +152,9 @@ for($page = 1; $page<= $number_of_page; $page++) {
     }
  ?>
 </div>
+</div>
+<a class="btn btn-success" href="#" id="submit" style="float: right;" role="button">Share</a>
+  <!-- <input type="submit"  name="submit" value="Share" style="float: right;"> -->
   </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
