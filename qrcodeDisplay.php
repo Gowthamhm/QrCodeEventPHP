@@ -155,7 +155,7 @@ for($page = 1; $page<= $number_of_page; $page++) {
 </div>
   <div class="row" style="float:right;">
 <!-- <a class="btn btn-success" href="#" id="submit" style="float: right;" role="button">Share</a> -->
-<button type="button" name="button" class="btn btn-success" href="#" id="submit" style="float: right;" role="button"></button>
+<button type="button" name="button" class="btn btn-success" href="#" id="submit" style="float: right;" role="button">Share</button>
   <!-- <input type="submit"  name="submit" value="Share" style="float: right;"> -->
 </div>
   </body>
