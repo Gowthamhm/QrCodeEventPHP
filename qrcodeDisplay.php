@@ -205,14 +205,14 @@ function uncheckAll() {
           });
           });
 
-//           $(document).ready(function() {
-//
-//     var $submit = $("#submit").hide(),
-//         $cbs = $('input[name="chk"]').click(function() {
-//             $submit.toggle( $cbs.is(":checked") );
-//         });
-//
-// });
+          $(document).ready(function() {
+
+    var $submit = $("#submit").hide(),
+        $cbs = $('input[name="chk"]').click(function() {
+            $submit.toggle( $cbs.is(":checked") );
+        });
+
+});
 function show(){
   if (document.querySelector("#example > tbody > tr > td:nth-child(1) > input[type=checkbox]").checked) {
      document.getElementById("submit").style.display = "block";
