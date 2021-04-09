@@ -30,13 +30,13 @@ $page_first_result = ($page-1) * $results_per_page;
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
-    <link rel="stylesheet" href="css/table.css" />
+    <!-- <link rel="stylesheet" href="css/table.css" /> -->
   </head>
   <body>
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <input type="radio" name="" value=""> </th>
+                  <th> <input type="checkbox" name="" value=""> </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
