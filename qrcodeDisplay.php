@@ -44,7 +44,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th> <input type="button" name="" value="select all" onclick='selectsdeselect()'> </th>
+                  <th>  <input type="button" onclick='selects()' value="Select All"/>  </th>
                   <th>Sl No.</th>
    <th>Text</th>
    <th>Qouted Text</th>
@@ -69,7 +69,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="chk" value="<?php echo $row['slno'] ?>" checked> </td>
+                        <td> <input type="checkbox" name="chk"  value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
@@ -95,7 +95,7 @@ $page_first_result = ($page-1) * $results_per_page;
             </tbody>
             <tfoot>
               <tr>
-                <th> </th>
+                <th><input type="button" onclick='deSelect()' value="Deselect All"/>  </th>
                 <th>Sl No.</th>
   <th>Text</th>
   <th>Qouted Text</th>
@@ -108,44 +108,23 @@ $page_first_result = ($page-1) * $results_per_page;
         </table>
   </body>
 </html>
-<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js" type="text/javascript" charset="utf-8"></script> -->
-
-<!-- DataTables CSS -->
-<!-- <link href="css/addons/datatables2.min.css" rel="stylesheet"> -->
-<!-- DataTables JS -->
-<!-- <script src="js/addons/datatables2.min.js" type="text/javascript"></script> -->
-
-<!-- DataTables Select CSS -->
-<!-- <link href="css/addons/datatables-select2.min.css" rel="stylesheet"> -->
-<!-- DataTables Select JS -->
-<!-- <script src="js/addons/datatables-select2.min.js" type="text/javascript"></script> -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-function selectsdeselect(){
-                var ele=document.getElementsByName('chk');
-                for(var i=0; i<ele.length; i++){
-                  console.log(i);
-                    if(ele[i].type=='checkbox'){
-                        if(ele[i].checked=true){
-                          console.log("true");
-                          ele[i].checked=false;
-                        }else {
-                          console.log("false");
-                          ele[i].checked=true;
-                        }
-                    }
+function selects(){
+              var ele=document.getElementsByName('chk');
+              for(var i=0; i<ele.length; i++){
+                  if(ele[i].type=='checkbox')
+                      ele[i].checked=true;
+              }
+          }
+          function deSelect(){
+              var ele=document.getElementsByName('chk');
+              for(var i=0; i<ele.length; i++){
+                  if(ele[i].type=='checkbox')
+                      ele[i].checked=false;
 
-                }
-            }
-</script>
+              }
+          }    </script>
