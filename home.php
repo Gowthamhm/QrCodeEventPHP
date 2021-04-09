@@ -29,8 +29,8 @@ include 'nav.php';
          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
          crossorigin="anonymous">
       <!-- <script type = "text/javascript" src="assets/ckeditor.js"></script> -->
-       <link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
-       <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+       <!-- <link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+       <link rel="stylesheet" type="text/css" href="assets/css/home.css"> -->
        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   </head>
   <body>
