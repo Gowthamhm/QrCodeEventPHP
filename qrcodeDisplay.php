@@ -73,7 +73,7 @@ $page_first_result = ($page-1) * $results_per_page;
     <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                  <th>  <input type="button" class="btn btn-default clf" onclick='selects()' value="Select All"/>  </th>
+                  <th> <button id="btn" class="btn btn-default clf">Check / uncheck All</button> </th>
                   <th>Sl No.</th>
    <th id="title">Text</th>
    <th>Qouted Text</th>
@@ -159,21 +159,39 @@ for($page = 1; $page<= $number_of_page; $page++) {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-function selects(){
-              var ele=document.getElementsByName('chk');
-              for(var i=0; i<ele.length; i++){
-                  if(ele[i].type=='checkbox')
-                      ele[i].checked=true;
-              }
-          }
-          function deSelect(){
-              var ele=document.getElementsByName('chk');
-              for(var i=0; i<ele.length; i++){
-                  if(ele[i].type=='checkbox')
-                      ele[i].checked=false;
-
-              }
-          }
+// function selects(){
+//               var ele=document.getElementsByName('chk');
+//               for(var i=0; i<ele.length; i++){
+//                   if(ele[i].type=='checkbox')
+//                       ele[i].checked=true;
+//               }
+//           }
+//           function deSelect(){
+//               var ele=document.getElementsByName('chk');
+//               for(var i=0; i<ele.length; i++){
+//                   if(ele[i].type=='checkbox')
+//                       ele[i].checked=false;
+//
+//               }
+//           }
+function check(checked = true) {
+    const cbs = document.querySelectorAll('input[name="chk"]');
+    cbs.forEach((cb) => {
+        cb.checked = checked;
+    });
+}
+const btn = document.querySelector('#btn');
+btn.onclick = checkAll;
+function checkAll() {
+    check();
+    // reassign click event handler
+    this.onclick = uncheckAll;
+}
+function uncheckAll() {
+    check(false);
+    // reassign click event handler
+    this.onclick = checkAll;
+}
           $('#search').keyup(function() {
           var regex = new RegExp($('#search').val(), "i");
           var rows = $('table tr:gt(0)');
