@@ -230,4 +230,13 @@ function uncheckAll() {
 //    document.getElementById("submit").style.display = "none";
 //   }
 // }
+$(document).ready(function(){
+    $checks = $(":checkbox");
+    $checks.on('change', function() {
+        var string = $checks.filter(":checked").map(function(i,v){
+            return this.value;
+        }).get().join(" ");
+        $('#hidden').val(string);
+    });
+});
            </script>
