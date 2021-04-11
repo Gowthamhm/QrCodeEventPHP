@@ -241,7 +241,9 @@ function checkbox(){
         checkboxesChecked.push(checkboxes[i].value);
      }
   }
-  document.getElementById("hidden").value = checkboxesChecked;
+  document.querySelector("#hidden").value =checkboxesChecked;
+  console.log(checkboxesChecked);
+  // document.getElementById("hidden").value = checkboxesChecked;
 
 }
            </script>
