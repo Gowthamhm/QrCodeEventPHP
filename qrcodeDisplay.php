@@ -234,9 +234,10 @@ function uncheckAll() {
            <script>
            document.getElementById('submit').onclick = function() {
              var markedCheckbox = document.getElementsByName('check_list[]');
+             var hidden = document.getElementById('hidden');
              for (var checkbox of markedCheckbox) {
                if (checkbox.checked)
-                 document.getElementById('hidden').append(checkbox.value + ' ');
+                 hidden.append(checkbox.value + ' ');
              }
            }
            </script>
