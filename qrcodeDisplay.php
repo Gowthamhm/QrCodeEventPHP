@@ -98,7 +98,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="chk"  value="<?php echo $row['slno'] ?>"> </td>
+                        <td> <input type="checkbox" name="check_list[]"  value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
@@ -110,8 +110,10 @@ $page_first_result = ($page-1) * $results_per_page;
                           echo "Not Shared Yet";
                        }else if($row['status'] == 1){
                          echo "Shared Already";
-                       }else{
-                         echo "Already Scanned";
+                       }else if($row['status'] == 99){
+                         echo "In QrCode Scanned & Out Shared ";
+                       }else if($row['status']==999){
+                         echo "All Done";
                        }
                        $count++;
             ?>
