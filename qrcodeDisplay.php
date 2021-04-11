@@ -184,7 +184,7 @@ for($page = 1; $page<= $number_of_page; $page++) {
 //               }
 //           }
 function check(checked = true) {
-    const cbs = document.querySelectorAll('input[name="chk"]');
+    const cbs = document.querySelectorAll('input[name="check_list[]"]');
     cbs.forEach((cb) => {
         cb.checked = checked;
     });
