@@ -124,6 +124,7 @@ $page_first_result = ($page-1) * $results_per_page;
             }
               ?>
             </tbody>
+            <input type="text" name="selectedId" id="hidden" value="">
             <tfoot>
               <tr>
                 <th></th>
@@ -235,7 +236,7 @@ function uncheckAll() {
              var markedCheckbox = document.getElementsByName('check_list[]');
              for (var checkbox of markedCheckbox) {
                if (checkbox.checked)
-                 document.body.append(checkbox.value + ' ');
+                 document.getElementById('hidden').append(checkbox.value + ' ');
              }
            }
            </script>
