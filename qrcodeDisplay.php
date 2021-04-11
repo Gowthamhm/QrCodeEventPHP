@@ -231,7 +231,8 @@ function uncheckAll() {
 //   }
 // }
 function checkbox(){
-  var checkboxes = document.getElementById('check');
+  // var checkboxes = document.getElementById('check');
+var checkboxes = document.getElementsByName('check_list[]');
   var checkboxesChecked = [];
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
