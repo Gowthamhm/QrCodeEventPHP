@@ -98,7 +98,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="check_list[]"  value="<?php echo $row['slno'] ?>"> </td>
+                        <td> <input type="checkbox" name="check_list[]" id="check"  value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
@@ -230,13 +230,18 @@ function uncheckAll() {
 //    document.getElementById("submit").style.display = "none";
 //   }
 // }
-$(document).ready(function(){
-    $checks = $(":checkbox");
-    $checks.on('change', function() {
-        var string = $checks.filter(":checked").map(function(i,v){
-            return this.value;
-        }).get().join(" ");
-        $('#hidden').val(string);
-    });
-});
+function checkbox(){
+
+  var checkboxes = document.getElementById('check');
+  var checkboxesChecked = [];
+  // loop over them all
+  for (var i=0; i<checkboxes.length; i++) {
+     // And stick the checked ones onto an array...
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i].value);
+     }
+  }
+  document.getElementById("hidden").value = checkboxesChecked;
+
+}
            </script>
