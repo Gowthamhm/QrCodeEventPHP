@@ -183,6 +183,11 @@ for($page = 1; $page<= $number_of_page; $page++) {
 //
 //               }
 //           }
+$("input:checkbox[name=check_list[]]:checked").each(function(){
+    yourArray.push($(this).val());
+    console.log(yourArray);
+});
+
 function check(checked = true) {
     const cbs = document.querySelectorAll('input[name="check_list[]"]');
     cbs.forEach((cb) => {
