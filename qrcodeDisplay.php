@@ -231,13 +231,3 @@ function uncheckAll() {
 //   }
 // }
            </script>
-           <script>
-           document.getElementById('submit').onclick = function() {
-             var markedCheckbox = document.getElementsByName('check_list[]');
-             var hidden = document.getElementById('hidden');
-             for (var checkbox of markedCheckbox) {
-               if (checkbox.checked)
-                 hidden.innerHTML=checkbox.value + ' ';
-             }
-           }
-           </script>
