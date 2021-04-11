@@ -124,7 +124,7 @@ $page_first_result = ($page-1) * $results_per_page;
             }
               ?>
             </tbody>
-            <input type="text" name="selectedId" id="hidden" value="">
+            <input type="hidden" name="selectedId" id="hidden" value="">
             <tfoot>
               <tr>
                 <th></th>
