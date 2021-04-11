@@ -37,7 +37,7 @@ $page_first_result = ($page-1) * $results_per_page;
            crossorigin="anonymous">
         <!-- <script type = "text/javascript" src="assets/ckeditor.js"></script> -->
          <link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
-         <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   </head>
   <style>
