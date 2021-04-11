@@ -237,7 +237,7 @@ function uncheckAll() {
              var hidden = document.getElementById('hidden');
              for (var checkbox of markedCheckbox) {
                if (checkbox.checked)
-                 hidden..innerHTML=checkbox.value + ' ';
+                 hidden.innerHTML=checkbox.value + ' ';
              }
            }
            </script>
