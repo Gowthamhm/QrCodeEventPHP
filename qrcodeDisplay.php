@@ -98,7 +98,7 @@ $page_first_result = ($page-1) * $results_per_page;
                  while($row = $result->fetch_assoc()){
                    ?>
                      <tr>
-                        <td> <input type="checkbox" name="check_list"  value="<?php echo $row['slno'] ?>"> </td>
+                        <td> <input type="checkbox" name="check_list[]"  value="<?php echo $row['slno'] ?>"> </td>
                        <td> <?php echo $count; ?></td>
                        <td id="title"><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
@@ -183,13 +183,8 @@ for($page = 1; $page<= $number_of_page; $page++) {
 //
 //               }
 //           }
-$("input:checkbox[name=check_list:checked").each(function(){
-    yourArray.push($(this).val());
-    console.log(yourArray);
-});
-
 function check(checked = true) {
-    const cbs = document.querySelectorAll('input[name="check_list"]');
+    const cbs = document.querySelectorAll('input[name="check_list[]"]');
     cbs.forEach((cb) => {
         cb.checked = checked;
     });
